@@ -9,10 +9,14 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 
 @Entity
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Author {
 
     @Id
@@ -28,9 +32,9 @@ public class Author {
 
     private int age;
 
-    @Column(updatable = false, nullable = false)
+    // @Column(updatable = false, nullable = false)
     private LocalDateTime createdAt;
 
-    @Column(insertable = false)
+    // @Column(insertable = false)
     private LocalDateTime lastModified;
 }
